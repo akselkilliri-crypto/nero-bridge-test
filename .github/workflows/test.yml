@@ -1,13 +1,13 @@
 name: Test Build
 on: [push, workflow_dispatch]
 jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- name: Create file
-run: echo "Успех! Сборка через NeroBridge работает." > success.txt
-- name: Upload artifact
-uses: actions/upload-artifact@v4
-with:
-name: nero-test-result
-path: success.txt
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create file
+        run: echo "Успех! Сборка через NeroBridge работает. YAML исправлен." > success.txt
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nero-test-result
+          path: success.txt
